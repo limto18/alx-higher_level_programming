@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A class that represente
-an empty square 
+an empty square
 """
 
 
