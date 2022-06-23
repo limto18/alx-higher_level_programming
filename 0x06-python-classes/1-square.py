@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""A class that represente
+square
+"""
+
+
 class Square:
     """Represents an empty square.
     Private instance attribute: size.
