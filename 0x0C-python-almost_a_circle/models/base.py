@@ -61,6 +61,7 @@ class Base:
         if any(issubclass(type(x), Base) is False for x in list_objs):
             raise TypeError("list_objs must be a list of instances")
         """
+        
         if list_objs is None or list_objs == []:
             jstr = "[]"
         else:
@@ -93,6 +94,7 @@ class Base:
 
         Returns: instance created
         """
+        
         if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
         elif cls.__name__ == 'Square':
