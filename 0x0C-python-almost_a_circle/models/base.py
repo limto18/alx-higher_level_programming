@@ -21,7 +21,6 @@ class Base:
         Args:
             - id: id of the instance
         """
-
         if type(id) != int and id is not None:
             raise TypeError("id must be an integer")
         if id is not None:
@@ -39,7 +38,6 @@ class Base:
 
         Returns: JSON representation of the list
         """
-
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         if (type(list_dictionaries) != list or
@@ -54,13 +52,13 @@ class Base:
 
         Args:
             - list_objs: list of instances who inherits of Base
-        
+        """
+        """
         if type(list_objs) != list and list_objs is not None:
             raise TypeError("list_objs must be a list of instances")
         if any(issubclass(type(x), Base) is False for x in list_objs):
             raise TypeError("list_objs must be a list of instances")
         """
-        
         if list_objs is None or list_objs == []:
             jstr = "[]"
         else:
@@ -76,7 +74,6 @@ class Base:
         Args:
             - json_string: string to convert to list
         """
-
         l = []
         if json_string is not None and json_string != '':
             if type(json_string) != str:
@@ -93,7 +90,6 @@ class Base:
 
         Returns: instance created
         """
-        
         if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
         elif cls.__name__ == 'Square':
@@ -104,7 +100,6 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances."""
-
         filename = cls.__name__ + ".json"
         l = []
         list_dicts = []
@@ -124,7 +119,6 @@ class Base:
         Args:
             - list_objs: list of instances
         """
-
         if (type(list_objs) != list and
            list_objs is not None or
            not all(isinstance(x, cls) for x in list_objs)):
@@ -148,7 +142,6 @@ class Base:
 
         Returns: list of instances
         """
-
         filename = cls.__name__ + ".csv"
         l = []
         if os.path.exists(filename):
@@ -201,7 +194,6 @@ class Base:
         """Helper method that draws a Rectangle
         or Square.
         """
-
         t.penup()
         t.setpos(rect.x, rect.y)
         t.pendown()
