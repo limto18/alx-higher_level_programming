@@ -10,7 +10,6 @@ import turtle
 import time
 from random import randrange
 
-
 class Base:
     """Class with:
     Private class attribute: __nb_objects
