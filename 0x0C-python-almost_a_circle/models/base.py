@@ -6,6 +6,9 @@ Defines a Base class for other classes in the project.
 import json
 import os
 import csv
+import turtle
+import time
+from random import randrange
 
 
 class Base:
@@ -169,11 +172,6 @@ class Base:
             - list_rectangles: list of Rectangle instances
             - list_squares: list of Square instances
         """
-
-        import turtle
-        import time
-        from random import randrange
-
         t = turtle.Turtle()
         t.color("beige")
         turtle.bgcolor("violet")
